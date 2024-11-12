@@ -14,4 +14,10 @@ export default (): Configs => ({
     password: process.env.POSTGRES_PASSWORD,
     dbName: process.env.POSTGRES_DB,
   },
+  tokens: {
+    access_secret: process.env.ACCESS_SECRET,
+    access_expires_in: Number(process.env.ACCESS_SECRET),
+    refresh_secret: process.env.REFRESH_SECRET,
+    refresh_expires_in: Number(process.env.REFRESH_EXPIRES_IN),
+  },
 });

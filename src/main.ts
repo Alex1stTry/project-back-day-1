@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: true,
     methods: 'GET,POST,PUT,DELETE',
     credentials: true,
   });
@@ -32,7 +32,7 @@ async function bootstrap() {
     .setVersion('1.0')
     .addBearerAuth({
       type: 'http',
-      scheme: 'Bearer ',
+      scheme: 'bearer',
       in: 'header',
       bearerFormat: 'JWT',
     })

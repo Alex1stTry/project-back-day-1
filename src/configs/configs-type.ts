@@ -1,6 +1,7 @@
 export type Configs = {
   app: AppConfig;
   pg: PostgresConfig;
+  tokens: TokensConfig;
 };
 
 export type AppConfig = {
@@ -14,4 +15,11 @@ export type PostgresConfig = {
   user: string;
   password: string;
   dbName: string;
+};
+
+export type TokensConfig = {
+  access_secret: string;
+  access_expires_in: number;
+  refresh_secret: string;
+  refresh_expires_in: number;
 };
